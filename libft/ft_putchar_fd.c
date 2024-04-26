@@ -1,33 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nneves-a <nneves-a@student.42lisboa.c      +#+  +:+       +#+        */
+/*   By: nneves-a <nneves-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/08 13:38:41 by nneves-a          #+#    #+#             */
-/*   Updated: 2024/04/09 15:56:00 by nneves-a         ###   ########.fr       */
+/*   Created: 2024/04/18 17:20:35 by nneves-a          #+#    #+#             */
+/*   Updated: 2024/04/22 20:24:22 by nneves-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
+#include "libft.h"
 
-int	ft_toupper(int c)
+void	ft_putchar_fd(char c, int fd)
 {
-	if (c >= 97 && c <= 122)
-	{
-		c -= 32;
-	}
-	return (c);
+	write(fd, &c, 1);
 }
-/*
-int	main(void)
-{
-	int	a;
-
-	a = 'd';
-	printf("%c", ft_toupper(a));
-	return (0);
-}
-*/

@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nneves-a <nneves-a@student.42lisboa.c      +#+  +:+       +#+        */
+/*   By: nneves-a <nneves-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/08 13:21:15 by nneves-a          #+#    #+#             */
-/*   Updated: 2024/04/09 20:32:23 by nneves-a         ###   ########.fr       */
+/*   Created: 2024/04/24 16:27:39 by nneves-a          #+#    #+#             */
+/*   Updated: 2024/04/24 20:40:21 by nneves-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str);
-int	ft_toupper(int c);
-int	ft_tolower(int c);
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
-int	ft_ialnum(int c);
-int	ft_isascii(int c);
-int	ft_isprint(int c);
+#include "libft.h"
+
+t_list	*ft_lstlast(t_list *lst)
+{
+	t_list	*node;
+
+	if (!lst)
+		return (NULL);
+	node = lst;
+	while (node->next != NULL)
+	{
+		node = node->next;
+	}
+	return (node);
+}

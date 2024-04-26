@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nneves-a <nneves-a@student.42lisboa.c      +#+  +:+       +#+        */
+/*   By: nneves-a <nneves-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/09 16:13:42 by nneves-a          #+#    #+#             */
-/*   Updated: 2024/04/09 16:18:17 by nneves-a         ###   ########.fr       */
+/*   Created: 2024/04/08 13:25:40 by nneves-a          #+#    #+#             */
+/*   Updated: 2024/04/26 15:47:46 by nneves-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
 #include <stdio.h>
+#include "libft.h"
 
-int	ft_isalnum(int c)
+size_t	ft_strlen(const char *str)
 {
-	if ((c >= '0' && c <= '9')
-		|| (c >= 'A' && c <= 'Z')
-		|| (c >= 'a' && c <= 'z'))
-		return (1);
-	else
-		return (0);
-}
-/*
-int	main(void)
-{
-	int	x;
+	size_t	i;
 
-	x = 67;
-	printf("%d", ft_isalnum(x));
-	return (0);
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
-*/

@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nneves-a <nneves-a@student.42lisboa.c      +#+  +:+       +#+        */
+/*   By: nneves-a <nneves-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/09 16:57:33 by nneves-a          #+#    #+#             */
-/*   Updated: 2024/04/09 18:51:33 by nneves-a         ###   ########.fr       */
+/*   Created: 2024/04/09 16:13:42 by nneves-a          #+#    #+#             */
+/*   Updated: 2024/04/18 18:38:08 by nneves-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <ctype.h>
 #include <stdio.h>
-#include <string.h>
 
-void *ft_memset(void *s, int c, size_t n)
+int	ft_isalnum(int c)
 {
-	while (n > 0)
-	{
-		s[n] = c;
-		n--;
-	}
-	return (s);
+	if ((c >= '0' && c <= '9')
+		|| (c >= 'A' && c <= 'Z')
+		|| (c >= 'a' && c <= 'z'))
+		return (1);
+	else
+		return (0);
 }
-
+/*
 int	main(void)
 {
-	char s[19] = "Moto Ratos de Marte";
-	size_t n = 9;
-	int c = 'Q';
+	int	x;
 
-	printf("%s", ft_memset(s, c, n));
+	x = 67;
+	printf("%d", ft_isalnum(x));
+	printf("%d", isalnum(50));
 	return (0);
 }
+*/
