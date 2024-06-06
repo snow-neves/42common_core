@@ -6,14 +6,14 @@
 /*   By: nneves-a <nneves-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 22:41:29 by nneves-a          #+#    #+#             */
-/*   Updated: 2024/06/05 22:46:03 by nneves-a         ###   ########.fr       */
+/*   Updated: 2024/06/06 17:52:33 by nneves-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line_bonus.h"
 
 static char	*extract(char *line);
-static char	 *ft_get_line(int fd, char *buffer, char *chars_left);
+static char	*ft_get_line(int fd, char *buffer, char *chars_left);
 
 char	*get_next_line(int fd)
 {
@@ -35,7 +35,7 @@ char	*get_next_line(int fd)
 	return (line);
 }
 
-static char	 *ft_get_line(int fd, char *buffer, char *chars_left)
+static char	*ft_get_line(int fd, char *buffer, char *chars_left)
 {
 	int		read_line;
 	char	*char_temp;
